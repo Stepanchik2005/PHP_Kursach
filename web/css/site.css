@@ -1,0 +1,238 @@
+/* =========================================================
+   MandryBlog — Кастомная тема для блога о путешествиях
+   ========================================================= */
+
+:root {
+    --travel-primary: #0f766e;
+    --travel-primary-dark: #115e59;
+    --travel-primary-light: #e6f7f5;
+    --travel-accent: #f59e0b;
+    --travel-bg: #f1f5f9;
+    --travel-card-bg: #ffffff;
+    --travel-text-main: #0f172a;
+    --travel-text-muted: #475569;
+    --travel-border: #e2e8f0;
+}
+
+/* Принудительно задаём светлый контрастный фон и читаемый текст */
+html,
+body {
+    height: 100%;
+    background-color: var(--travel-bg) !important;
+    color: var(--travel-text-main) !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+/* Навигационная панель */
+.bg-teal-dark {
+    background: linear-gradient(90deg, #0d4f4b 0%, #115e59 100%) !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 1.3rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fde68a !important;
+}
+
+/* Hero-блок */
+.hero-travel {
+    background: linear-gradient(135deg, #0f524e 0%, #0f766e 55%, #0d9488 100%);
+    color: #ffffff !important;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 25px rgba(15, 118, 110, 0.18);
+}
+
+.hero-travel h1 {
+    color: #ffffff !important;
+}
+
+.hero-travel p {
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Карточки (перекрываем dark-mode Bootstrap) */
+.card,
+.article-card,
+.travel-sidebar .card,
+.site-single .card {
+    background-color: var(--travel-card-bg) !important;
+    color: var(--travel-text-main) !important;
+    border: 1px solid var(--travel-border) !important;
+}
+
+.article-card {
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.10) !important;
+}
+
+.article-card-img {
+    height: 290px;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 1px solid var(--travel-border);
+}
+
+/* Заголовки и ссылки внутри карточек */
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card .text-dark,
+.card a.text-dark {
+    color: var(--travel-text-main) !important;
+}
+
+.card a.text-dark:hover {
+    color: var(--travel-primary) !important;
+}
+
+.card .text-muted {
+    color: var(--travel-text-muted) !important;
+}
+
+/* Списки категорий в сайдбаре */
+.list-group-item {
+    background-color: transparent !important;
+    color: var(--travel-text-main) !important;
+    border-color: var(--travel-border) !important;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+}
+
+.category-link {
+    color: var(--travel-text-main) !important;
+    font-weight: 500;
+    transition: all 0.15s ease;
+}
+
+.category-link:hover {
+    color: var(--travel-primary) !important;
+    padding-left: 5px;
+}
+
+/* Фирменные цвета и бейджи */
+.text-teal {
+    color: var(--travel-primary) !important;
+}
+
+.bg-teal-soft {
+    background-color: var(--travel-primary-light) !important;
+    color: var(--travel-primary-dark) !important;
+    font-weight: 600;
+}
+
+/* Кнопки */
+.btn-teal {
+    background-color: var(--travel-primary) !important;
+    border-color: var(--travel-primary) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.btn-teal:hover {
+    background-color: var(--travel-primary-dark) !important;
+    border-color: var(--travel-primary-dark) !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-teal {
+    background-color: #ffffff !important;
+    border: 1.5px solid var(--travel-primary) !important;
+    color: var(--travel-primary) !important;
+    font-weight: 500;
+}
+
+.btn-outline-teal:hover {
+    background-color: var(--travel-primary) !important;
+    color: #ffffff !important;
+}
+
+/* Теги на карточках */
+.badge.bg-light {
+    background-color: #f1f5f9 !important;
+    color: #334155 !important;
+    border-color: #cbd5e1 !important;
+    font-weight: 500;
+}
+
+.badge.bg-light:hover {
+    background-color: var(--travel-primary-light) !important;
+    color: var(--travel-primary-dark) !important;
+    border-color: var(--travel-primary) !important;
+}
+
+/* Блок шеринга и комментариев на странице статьи */
+.bg-light {
+    background-color: #f8fafc !important;
+    color: var(--travel-text-main) !important;
+}
+
+.border-teal {
+    border-color: var(--travel-primary) !important;
+}
+
+.article-content {
+    color: #1e293b !important;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+/* Формы и поля ввода */
+.form-control {
+    background-color: #ffffff !important;
+    color: var(--travel-text-main) !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.form-control:focus {
+    border-color: var(--travel-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.18) !important;
+}
+
+/* Хлебные крошки и пагинация */
+.breadcrumb {
+    background-color: #ffffff;
+    padding: 0.65rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--travel-border);
+}
+
+.breadcrumb-item a {
+    color: var(--travel-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.page-link {
+    color: var(--travel-primary) !important;
+    background-color: #ffffff !important;
+    border-color: var(--travel-border) !important;
+}
+
+.page-item.active .page-link {
+    background-color: var(--travel-primary) !important;
+    border-color: var(--travel-primary) !important;
+    color: #ffffff !important;
+}
+
+.last-no-border:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}

@@ -1,0 +1,30 @@
+# IDE and editor files
+.idea
+.vscode
+nbproject
+.buildpath
+.project
+.settings
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Composer
+/vendor
+composer.phar
+
+# Yii2 runtime and compiled web assets
+/runtime/*
+!/runtime/.gitignore
+/web/assets/*
+!/web/assets/.gitignore
+
+# PHPUnit & tests
+phpunit.phar
+/phpunit.xml
+tests/_output/*
+tests/_support/_generated
+
+# Vagrant
+/.vagrant
